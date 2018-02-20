@@ -1,0 +1,21 @@
+version: '2'
+services:
+
+    task_db:
+        image: postgres
+        restart: always
+        expose: 
+            - "5432"
+
+    rabbitmq:
+        image: rabbitmq
+        restart: always
+        expose:
+            - "5672"
+
+    consumer:
+        build: ./consumer
+        restart: always
+        links:
+            - rabbitmq
+            - task_db 

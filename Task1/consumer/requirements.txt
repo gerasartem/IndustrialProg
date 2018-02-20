@@ -1,0 +1,2 @@
+pika
+py-postgresql
