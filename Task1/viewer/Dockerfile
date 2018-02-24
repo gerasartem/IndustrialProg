@@ -4,6 +4,6 @@ ADD requirements.txt requirements.txt
 RUN pip install --upgrade pip
 RUN pip install -r requirements.txt
 
-ADD . /consumer_app
-WORKDIR /consumer_app
-CMD python consumer.py
+ADD . /viewer_app
+WORKDIR /viewer_app
+CMD python viewer.py
